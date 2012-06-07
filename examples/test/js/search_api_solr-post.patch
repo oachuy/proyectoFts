@@ -1,0 +1,23 @@
+diff --git web/sites/all/modules/contrib/search_api_solr/service.inc web/sites/all/modules/contrib/search_api_solr/service.inc
+index 8181bca..5d3dac1 100644
+--- web/sites/all/modules/contrib/search_api_solr/service.inc
++++ web/sites/all/modules/contrib/search_api_solr/service.inc
+@@ -489,7 +489,7 @@ class SearchApiSolrService extends SearchApiAbstractService {
+       $this->connect();
+       drupal_alter('search_api_solr_query', $call_args, $query);
+       $this->preQuery($call_args, $query);
+-      $response = $this->solr->search($keys, $offset, $limit, $params);
++      $response = $this->solr->search($keys, $offset, $limit, $params, Apache_Solr_Service::METHOD_POST);
+       $time_query_done = microtime(TRUE);
+ 
+       if ($response->getHttpStatus() != 200) {
+@@ -1031,7 +1031,7 @@ class SearchApiSolrService extends SearchApiAbstractService {
+         'params' => &$params,
+       );
+       drupal_alter('search_api_solr_multi_query', $call_args, $query);
+-      $response = $this->solr->search($keys, $offset, $limit, $params);
++      $response = $this->solr->search($keys, $offset, $limit, $params, Apache_Solr_Service::METHOD_POST);
+       $time_query_done = microtime(TRUE);
+ 
+       if ($response->getHttpStatus() != 200) {
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>AJAX Solr</title>
+  <link rel="stylesheet" type="text/css" href="css/reuters.css" media="screen" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/reuters.6.js"></script>
+  <script type="text/javascript" src="../../core/Core.js"></script>
+  <script type="text/javascript" src="../../core/AbstractManager.js"></script>
+  <script type="text/javascript" src="../../managers/Manager.jquery.js"></script>
+  <script type="text/javascript" src="../../core/Parameter.js"></script>
+  <script type="text/javascript" src="../../core/ParameterStore.js"></script>
+  <script type="text/javascript" src="../../core/AbstractWidget.js"></script>
+  <script type="text/javascript" src="widgets/ResultWidgethlq1.js"></script>
+  <script type="text/javascript" src="widgets/ResultWidgethlq2.js"></script>
+  <script type="text/javascript" src="widgets/ResultWidgethlq3.js"></script>
+  <script type="text/javascript" src="widgets/ResultContractWidget.js"></script>
+  <script type="text/javascript" src="../../helpers/jquery/ajaxsolr.theme.js"></script>
+  <script type="text/javascript" src="../../helpers/manageSpan.js"></script>
+  <script type="text/javascript" src="js/reuters.theme.js"></script>
+  <script type="text/javascript" src="js/jquery.livequery.js"></script>
+  <script type="text/javascript" src="../../widgets/jquery/PagerWidget.js"></script>
+  <script type="text/javascript" src="../../core/AbstractFacetWidget.js"></script>
+  <script type="text/javascript" src="../../core/AbstractTextWidget.js"></script>
+  <script type="text/javascript" src="widgets/TextWidgetQuery1.js"></script>
+  <script type="text/javascript" src="widgets/TextWidgetQuery2.js"></script>
+  <script type="text/javascript" src="widgets/TextWidgetQuery3.js"></script>
+  <script type="text/javascript" src="js/SearchHighlight.js" ></script>
+  <style type="text/css">
+      
+      .hilite,.hilite1 {background-color: brown}
+	  .hilite2 {background-color: pink}
+      .hilite3 {background-color: gray}
+      .hilite4 {background-color: orange}
+      
+      .hiliteq1,.hilite1 {background-color: yellow}
+	  .hilite2 {background-color: pink}
+      .hilite3 {background-color: gray}
+      .hilite4 {background-color: orange}
+      
+      .hiliteq2,.hilite1 {background-color: gray}
+	  .hilite2 {background-color: pink}
+      .hilite3 {background-color: gray}
+      .hilite4 {background-color: orange}
+      
+      .hiliteq3,.hilite1 {background-color: orange}
+	  .hilite2 {background-color: pink}
+      .hilite3 {background-color: gray}
+      .hilite4 {background-color: orange}
+      
+  </style>
+  
+</head>
+<body>
+  <div id="wrap"> 
+    <div id="header">
+      <h1>Prueba de Concepto T Gestiona</h1>
+      <h2>An&aacute;lisis de Contratos Hablados</h2>
+    </div>
+
+    <div class="right">
+      <div  id="result">
+        <h2>Query1</h2>
+        <div id="navigation">
+          <ul id="pager"></ul>
+          <div id="pager-header"></div>
+        </div>
+        <div id="docs"></div>
+      </div>
+    </div>
+    
+     <div class="right">
+      <div  id="result2">
+        <h2>Query2</h2>
+        <div id="navigation">
+          <ul id="pager"></ul>
+          <div id="pager-header"></div>
+        </div>
+        <div id="docs3"></div>
+      </div>
+    </div>
+    
+    <div class="right">
+      <div  id="result3">
+        <h2>Query3</h2>
+        <div id="navigation">
+          <ul id="pager"></ul>
+          <div id="pager-header"></div>
+        </div>
+        <div id="docs4"></div>
+      </div>
+    </div>
+
+    <div class="left">
+      <h2>Current Selection</h2>
+      <ul id="selection"></ul>
+
+      <h2>Search1</h2>
+      <span id="search_help">(press ESC to close suggestions)</span>
+      <ul id="search">
+        <input type="text" id="query" name="query"/>
+      </ul>
+      
+      <h2>Search2</h2>
+      <span id="search_help">(press ESC to close suggestions)</span>
+      <ul id="search2">
+        <input type="text" id="query" name="query"/>
+      </ul>
+      
+      <h2>Search3</h2>
+      <span id="search_help">(press ESC to close suggestions)</span>
+      <ul id="search3">
+        <input type="text" id="query" name="query"/>
+      </ul>
+
+      <h2>Contrato</h2>
+      <div id="content">
+        <div id="navigation">
+          <ul id="pager"></ul>
+          <div id="pager-header"></div>
+        </div>
+        <div id="docs2"></div>
+      </div>
+      
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>  
+</body>
+
+
+
+</html>
